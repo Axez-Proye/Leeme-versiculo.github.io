@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Versículos de Aliento</title>
+</head>
+<body>
+    <div id="page-content"> <!-- Contenedor para el contenido de la página -->
+        <header>
+            <h1>Léeme cuando te sientas...</h1>
+        </header>
+
+        <div id="emociones">
+            <h2>¿Cómo te sientes ahora?</h2>
+            <button class="emocion" data-emocion="felicidad">Feliz</button>
+            <button class="emocion" data-emocion="tristeza">Triste</button>
+            <button class="emocion" data-emocion="ansiedad">Ansioso</button>
+            <button class="emocion" data-emocion="enojo">Enojado</button>
+            <button class="emocion" data-emocion="tranquilidad">Tranquilo</button>
+        </div>
+    </div>
+
+    <div id="versiculo-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-referencia-versiculo"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="modal-texto-versiculo"></p>
+                <p id="modal-reflexion"></p>
+                <button id="ir-a-biblia">Ir a la Biblia</button> <!-- Botón para ir a la Biblia -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

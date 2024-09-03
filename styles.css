@@ -1,0 +1,199 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+#emociones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    width: 90%;
+}
+
+.emocion {
+    padding: 15px 25px;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 10px 0;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.emocion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores específicos para cada emoción */
+.emocion[data-emocion="felicidad"] {
+    background-color: #ffe082;
+}
+
+.emocion[data-emocion="tristeza"] {
+    background-color: #64b5f6;
+}
+
+.emocion[data-emocion="ansiedad"] {
+    background-color: #81c784;
+}
+
+.emocion[data-emocion="enojo"] {
+    background-color: #e57373;
+}
+
+.emocion[data-emocion="tranquilidad"] {
+    background-color: #aed581;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.modal-body p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Usar IDs correctos aquí */
+.modal-body #modal-texto-versiculo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-body #modal-reflexion {
+    font-size: 1.3rem;
+    color: #222;
+    font-style: italic;
+    font-weight: 600;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #333;
+}
+
+/* CSS para el desenfoque */
+#page-content.modal-open {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+/* Estilo para el botón "Ir a la Biblia" */
+#ir-a-biblia {
+    background-color: #4CAF50; /* Verde brillante */
+    color: white; /* Texto en blanco */
+    padding: 15px 32px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    margin-top: 20px; /* Espacio superior */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto hover para el botón */
+#ir-a-biblia:hover {
+    background-color: #45a049; /* Verde más oscuro */
+    transform: translateY(-3px); /* Efecto de elevar el botón */
+}
+
+/* Efecto cuando se presiona el botón */
+#ir-a-biblia:active {
+    background-color: #3e8e41; /* Verde más oscuro aún */
+    transform: translateY(2px); /* Efecto de presionado */
+}
+
+/* Opcional: Estilo adicional para darle un toque 3D */
+#ir-a-biblia {
+    font-family: 'Arial', sans-serif; /* Cambiar la fuente si es necesario */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra extra para un efecto 3D */
+}
